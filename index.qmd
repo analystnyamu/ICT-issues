@@ -1,0 +1,10 @@
+---
+title: "A Guide to Dealing with ICT Issues"
+author: "Martin Wanjiru"
+date: "Oct 26, 2024"
+format: html
+---
+
+# Introduction
+
+Welcome to this comprehensive guide on dealing with common ICT issues. This guide covers various challenges in ICT and provides practical solutions for each.

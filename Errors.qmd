@@ -1,9 +1,5 @@
----
-title: "Troubleshooting: 'Something Didn’t Go as Planned' Error"
-author: "Your Name"
-date: "Today’s Date"
-format: html
----
+
+# SECTION ONE
 
 The message **"Something didn't go as planned. No need to worry---undoing changes"** typically appears after a failed Windows update. Windows is trying to undo recent changes to restore the system to its previous state.
 

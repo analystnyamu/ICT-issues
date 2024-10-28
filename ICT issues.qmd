@@ -1,9 +1,4 @@
----
-title: "Backing Up Folders Using Command Prompt"
-author: "Your Name"
-date: "Today’s Date"
-format: html
----
+# SECTION TWO
 
 If you are unable to boot into Windows and need to back up specific folders like **Desktop**, **Downloads**, and **Documents** using the **Command Prompt** from a recovery environment, you can use a USB drive or external hard drive as the destination for the backup.
 
