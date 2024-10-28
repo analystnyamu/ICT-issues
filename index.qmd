@@ -8,3 +8,209 @@ format: html
 # Introduction
 
 Welcome to this comprehensive guide on dealing with common ICT issues. This guide covers various challenges in ICT and provides practical solutions for each.
+
+# ICT Issues Overview
+
+If you are unable to boot into Windows and need to back up specific folders like **Desktop**, **Downloads**, and **Documents** using the **Command Prompt** from a recovery environment, you can use a USB drive or external hard drive as the destination for the backup.
+
+## Step-by-Step Guide to Backup Folders Using Command Prompt
+
+### 1. Boot into Advanced Startup Options
+
+If your computer won’t boot normally, use the following method to access the **Advanced Startup Options**:
+
+- Power on your computer and as soon as it begins booting, hold the **power button** for 10 seconds to force a shutdown.
+- Repeat this 2-3 times, and on the next boot, Windows should automatically enter the **Advanced Startup Options** menu.
+- From here, select **Troubleshoot > Advanced Options > Command Prompt**.
+
+### 2. Connect Your External Storage Device
+
+- Plug in a USB drive or external hard drive where you want to back up your folders.
+
+### 3. Identify Your External Drive Letter
+
+In the **Command Prompt**, type the following command to list all drives:
+
+```{bash}
+wmic logicaldisk get name
+```
+
+This will display all available drives. Your external drive will have a letter like E: or F:. Note the drive letter of your external storage.
+
+### 4. Navigate to Your User Directory
+
+You will need to navigate to your user's home folder where the Desktop, Downloads, and Documents folders are located. This folder is typically located at:
+
+```{bash}
+Copy code
+C:\Users\YourUsername
+```
+
+To navigate to the folder, run the following command, replacing YourUsername with your actual username:
+
+```{bash}
+Copy code
+cd C:\Users\YourUsername
+```
+
+### 5. Backup the Folders
+
+Now, use the xcopy command to copy the folders to your external drive.
+
+**Backup Desktop Folder**
+
+```{bash}
+xcopy C:\Users\YourUsername\Desktop E:\Backup\Desktop /E /H /C /I
+```
+
+*  Replace E:\Backup\Desktop with the correct drive letter and folder path on your external drive.
+     
+    * /E copies all directories and subdirectories, including empty ones.
+  
+    * /H copies hidden files as well.
+    
+    */C continues copying even if errors occur.
+    
+    */I assumes the destination is a directory.
+**Backup Downloads Folder**
+
+```{bash}
+xcopy C:\Users\YourUsername\Downloads E:\Backup\Downloads /E /H /C /I
+```
+
+**Backup Documents Folder**
+
+```{bash}
+xcopy C:\Users\YourUsername\Documents E:\Backup\Documents /E /H /C /I
+```
+
+### 6. Verify Backup
+
+After copying, you can use the following command to verify the contents of your backup:
+
+```{bash}
+dir E:\Backup
+```
+
+This will show you the directories and files that have been copied.
+
+### 7. Safely Eject Your External Drive
+
+After the backup is complete, make sure to safely eject the drive by typing:
+
+```{bash}
+wmic logicaldisk where "DeviceID='E:'" get name, volumename
+```
+
+Replace E: with your drive letter.
+Once the process finishes, you can safely remove the external drive.
+
+### 8. Exit Command Prompt
+
+After the backup is complete, type exit to close the Command Prompt.
+
+### Summary
+
+Boot into Advanced Startup Options and open Command Prompt.
+Use the `xcopy` command to back up the Desktop, Downloads, and Documents folders to your external storage.
+Make sure to verify the backup and safely remove the external drive before exiting Command Prompt.
+
+
+# Common Errors in ICT
+
+## "Something didn't go as planned...
+
+The message **"Something didn't go as planned. No need to worry---undoing changes"** typically appears after a failed Windows update. Windows is trying to undo recent changes to restore the system to its previous state.
+
+This issue usually occurs when an update installation fails or encounters an error. Here are steps you can follow to resolve this issue:
+
+## 1. Wait for Windows to Finish Undoing Changes
+
+First, give Windows time to complete the undoing process. Sometimes, it may take several minutes.\
+Make sure the computer is connected to power to prevent interruptions during the process.
+
+## 2. Force Restart the Computer (if stuck)
+
+If the system is stuck for too long (e.g., more than an hour), you can try force restarting it:
+
+-   Press and hold the **Power** button for 10-15 seconds until the system turns off.
+-   Wait a few seconds and power it back on.
+
+If the system boots normally after this, continue with the steps below to prevent future issues.
+
+## 3. Boot into Safe Mode
+
+If the issue persists after restarting, try booting into **Safe Mode** to troubleshoot:
+
+-   **Access Advanced Startup**:
+    -   Power off your computer by pressing and holding the **Power** button.
+    -   Power it back on, and as soon as you see the Windows logo, press and hold the **Power** button again to force a shutdown.
+    -   Repeat this 2-3 times until you see the **Advanced Startup Options** screen.
+-   **Navigate to Safe Mode**:
+    -   Select **Troubleshoot \> Advanced Options \> Startup Settings \> Restart**.
+    -   Once the computer restarts, press **F4** (or **F5** for Safe Mode with Networking) to boot into Safe Mode.
+
+## 4. Run Windows Update Troubleshooter
+
+In Safe Mode, run the **Windows Update Troubleshooter** to fix any problems related to the failed update:
+
+1.  Go to **Settings \> Update & Security \> Troubleshoot**.
+2.  Click **Windows Update**, then select **Run the troubleshooter**.
+3.  Follow the prompts and apply any suggested fixes.
+
+## 5. Delete Pending Windows Updates
+
+If the update still fails, you can delete the pending updates and try again:
+
+1.  Open **Command Prompt** as Administrator (you can search for "cmd" and right-click to select "Run as administrator").
+
+2.  Type the following command to stop the Windows Update service:
+
+    ``` bash
+    net stop wuauserv
+    ```
+
+3.  Then, stop the **Background Intelligent Transfer Service (BITS)**:
+
+    ``` bash
+    net stop bits
+    ```
+
+4.  Delete the files in the update folder by typing:
+
+    ``` bash
+    del %systemroot%\SoftwareDistribution\DataStore\*.* /s /q
+    del %systemroot%\SoftwareDistribution\Download\*.* /s /q
+    ```
+
+5.  Restart the services you stopped:
+
+    ``` bash
+    net start wuauserv
+    net start bits
+    ```
+
+6.  Reboot your computer and try updating again.
+
+## 6. Perform a System Restore
+
+If the above methods don't work, you can try restoring your computer to a point before the update was applied:
+
+1.  In the **Advanced Startup Options**, choose **Troubleshoot \> Advanced Options \> System Restore**.
+2.  Select a restore point from before the issue started.
+3.  Follow the prompts to restore the system to that point.
+
+## 7. Perform an In-Place Upgrade or Reset
+
+If none of the above works, you can perform a **repair installation** using the Windows 10/11 installation media:
+
+1.  Download the **Windows Installation Media tool** from Microsoft's website on a working computer.
+2.  Create a bootable USB drive and boot your computer from the USB.
+3.  Select **Repair your computer** and choose the **Reset this PC** option, allowing you to keep your files while reinstalling Windows.
+
+This should resolve any deeper issues with the Windows update system.
+
+## 8. Contact Support
+
+If the issue persists after all of these steps, you may want to contact **Microsoft Support** or visit a professional technician.
+

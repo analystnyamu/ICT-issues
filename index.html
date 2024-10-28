@@ -82,11 +82,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#a-guide-to-deal-with-ict-issues" id="toc-a-guide-to-deal-with-ict-issues" class="nav-link active" data-scroll-target="#a-guide-to-deal-with-ict-issues"><span class="header-section-number">1</span> A Guide to Deal With ICT Issues</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#ict-issues-overview" id="toc-ict-issues-overview" class="nav-link" data-scroll-target="#ict-issues-overview">ICT Issues Overview</a>
   <ul class="collapse">
-  <li><a href="#troubleshooting-something-didnt-go-as-planned-error" id="toc-troubleshooting-something-didnt-go-as-planned-error" class="nav-link" data-scroll-target="#troubleshooting-something-didnt-go-as-planned-error"><span class="header-section-number">1.1</span> Troubleshooting: ‘Something Didn’t Go as Planned’ Error</a></li>
-  <li><a href="#backing-up-folders-using-command-prompt" id="toc-backing-up-folders-using-command-prompt" class="nav-link" data-scroll-target="#backing-up-folders-using-command-prompt"><span class="header-section-number">1.2</span> Backing Up Folders Using Command Prompt</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">1.3</span> Conclusion</a></li>
+  <li><a href="#step-by-step-guide-to-backup-folders-using-command-prompt" id="toc-step-by-step-guide-to-backup-folders-using-command-prompt" class="nav-link" data-scroll-target="#step-by-step-guide-to-backup-folders-using-command-prompt">Step-by-Step Guide to Backup Folders Using Command Prompt</a></li>
+  </ul></li>
+  <li><a href="#common-errors-in-ict" id="toc-common-errors-in-ict" class="nav-link" data-scroll-target="#common-errors-in-ict">Common Errors in ICT</a>
+  <ul class="collapse">
+  <li><a href="#something-didnt-go-as-planned" id="toc-something-didnt-go-as-planned" class="nav-link" data-scroll-target="#something-didnt-go-as-planned">“Something didn’t go as planned…</a></li>
+  <li><a href="#wait-for-windows-to-finish-undoing-changes" id="toc-wait-for-windows-to-finish-undoing-changes" class="nav-link" data-scroll-target="#wait-for-windows-to-finish-undoing-changes">1. Wait for Windows to Finish Undoing Changes</a></li>
+  <li><a href="#force-restart-the-computer-if-stuck" id="toc-force-restart-the-computer-if-stuck" class="nav-link" data-scroll-target="#force-restart-the-computer-if-stuck">2. Force Restart the Computer (if stuck)</a></li>
+  <li><a href="#boot-into-safe-mode" id="toc-boot-into-safe-mode" class="nav-link" data-scroll-target="#boot-into-safe-mode">3. Boot into Safe Mode</a></li>
+  <li><a href="#run-windows-update-troubleshooter" id="toc-run-windows-update-troubleshooter" class="nav-link" data-scroll-target="#run-windows-update-troubleshooter">4. Run Windows Update Troubleshooter</a></li>
+  <li><a href="#delete-pending-windows-updates" id="toc-delete-pending-windows-updates" class="nav-link" data-scroll-target="#delete-pending-windows-updates">5. Delete Pending Windows Updates</a></li>
+  <li><a href="#perform-a-system-restore" id="toc-perform-a-system-restore" class="nav-link" data-scroll-target="#perform-a-system-restore">6. Perform a System Restore</a></li>
+  <li><a href="#perform-an-in-place-upgrade-or-reset" id="toc-perform-an-in-place-upgrade-or-reset" class="nav-link" data-scroll-target="#perform-an-in-place-upgrade-or-reset">7. Perform an In-Place Upgrade or Reset</a></li>
+  <li><a href="#contact-support" id="toc-contact-support" class="nav-link" data-scroll-target="#contact-support">8. Contact Support</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -124,40 +135,172 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="a-guide-to-deal-with-ict-issues" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> A Guide to Deal With ICT Issues</h1>
-<p>In today’s digital age, encountering ICT (Information and Communication Technology) issues is common. This guide provides practical solutions for addressing common problems, including troubleshooting errors like <strong>‘Something Didn’t Go as Planned’</strong> and instructions for backing up folders using the Command Prompt.</p>
-<section id="troubleshooting-something-didnt-go-as-planned-error" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="troubleshooting-something-didnt-go-as-planned-error"><span class="header-section-number">1.1</span> Troubleshooting: ‘Something Didn’t Go as Planned’ Error</h2>
-<p>When faced with the error message <strong>‘Something Didn’t Go as Planned,’</strong> it can be frustrating. This section outlines steps to diagnose and resolve this issue:</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Welcome to this comprehensive guide on dealing with common ICT issues. This guide covers various challenges in ICT and provides practical solutions for each.</p>
+</section>
+<section id="ict-issues-overview" class="level1">
+<h1>ICT Issues Overview</h1>
+<p>If you are unable to boot into Windows and need to back up specific folders like <strong>Desktop</strong>, <strong>Downloads</strong>, and <strong>Documents</strong> using the <strong>Command Prompt</strong> from a recovery environment, you can use a USB drive or external hard drive as the destination for the backup.</p>
+<section id="step-by-step-guide-to-backup-folders-using-command-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-guide-to-backup-folders-using-command-prompt">Step-by-Step Guide to Backup Folders Using Command Prompt</h2>
+<section id="boot-into-advanced-startup-options" class="level3">
+<h3 class="anchored" data-anchor-id="boot-into-advanced-startup-options">1. Boot into Advanced Startup Options</h3>
+<p>If your computer won’t boot normally, use the following method to access the <strong>Advanced Startup Options</strong>:</p>
+<ul>
+<li>Power on your computer and as soon as it begins booting, hold the <strong>power button</strong> for 10 seconds to force a shutdown.</li>
+<li>Repeat this 2-3 times, and on the next boot, Windows should automatically enter the <strong>Advanced Startup Options</strong> menu.</li>
+<li>From here, select <strong>Troubleshoot &gt; Advanced Options &gt; Command Prompt</strong>.</li>
+</ul>
+</section>
+<section id="connect-your-external-storage-device" class="level3">
+<h3 class="anchored" data-anchor-id="connect-your-external-storage-device">2. Connect Your External Storage Device</h3>
+<ul>
+<li>Plug in a USB drive or external hard drive where you want to back up your folders.</li>
+</ul>
+</section>
+<section id="identify-your-external-drive-letter" class="level3">
+<h3 class="anchored" data-anchor-id="identify-your-external-drive-letter">3. Identify Your External Drive Letter</h3>
+<p>In the <strong>Command Prompt</strong>, type the following command to list all drives:</p>
+<pre class="{bash}"><code>wmic logicaldisk get name</code></pre>
+<p>This will display all available drives. Your external drive will have a letter like E: or F:. Note the drive letter of your external storage.</p>
+</section>
+<section id="navigate-to-your-user-directory" class="level3">
+<h3 class="anchored" data-anchor-id="navigate-to-your-user-directory">4. Navigate to Your User Directory</h3>
+<p>You will need to navigate to your user’s home folder where the Desktop, Downloads, and Documents folders are located. This folder is typically located at:</p>
+<pre class="{bash}"><code>Copy code
+C:\Users\YourUsername</code></pre>
+<p>To navigate to the folder, run the following command, replacing YourUsername with your actual username:</p>
+<pre class="{bash}"><code>Copy code
+cd C:\Users\YourUsername</code></pre>
+</section>
+<section id="backup-the-folders" class="level3">
+<h3 class="anchored" data-anchor-id="backup-the-folders">5. Backup the Folders</h3>
+<p>Now, use the xcopy command to copy the folders to your external drive.</p>
+<p><strong>Backup Desktop Folder</strong></p>
+<pre class="{bash}"><code>xcopy C:\Users\YourUsername\Desktop E:\Backup\Desktop /E /H /C /I</code></pre>
+<ul>
+<li><p>Replace E:with the correct drive letter and folder path on your external drive.</p>
+<ul>
+<li><p>/E copies all directories and subdirectories, including empty ones.</p></li>
+<li><p>/H copies hidden files as well.</p></li>
+</ul>
+<p>*/C continues copying even if errors occur.</p>
+<p>*/I assumes the destination is a directory. <strong>Backup Downloads Folder</strong></p></li>
+</ul>
+<pre class="{bash}"><code>xcopy C:\Users\YourUsername\Downloads E:\Backup\Downloads /E /H /C /I</code></pre>
+<p><strong>Backup Documents Folder</strong></p>
+<pre class="{bash}"><code>xcopy C:\Users\YourUsername\Documents E:\Backup\Documents /E /H /C /I</code></pre>
+</section>
+<section id="verify-backup" class="level3">
+<h3 class="anchored" data-anchor-id="verify-backup">6. Verify Backup</h3>
+<p>After copying, you can use the following command to verify the contents of your backup:</p>
+<pre class="{bash}"><code>dir E:\Backup</code></pre>
+<p>This will show you the directories and files that have been copied.</p>
+</section>
+<section id="safely-eject-your-external-drive" class="level3">
+<h3 class="anchored" data-anchor-id="safely-eject-your-external-drive">7. Safely Eject Your External Drive</h3>
+<p>After the backup is complete, make sure to safely eject the drive by typing:</p>
+<pre class="{bash}"><code>wmic logicaldisk where "DeviceID='E:'" get name, volumename</code></pre>
+<p>Replace E: with your drive letter. Once the process finishes, you can safely remove the external drive.</p>
+</section>
+<section id="exit-command-prompt" class="level3">
+<h3 class="anchored" data-anchor-id="exit-command-prompt">8. Exit Command Prompt</h3>
+<p>After the backup is complete, type exit to close the Command Prompt.</p>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<p>Boot into Advanced Startup Options and open Command Prompt. Use the <code>xcopy</code> command to back up the Desktop, Downloads, and Documents folders to your external storage. Make sure to verify the backup and safely remove the external drive before exiting Command Prompt.</p>
+</section>
+</section>
+</section>
+<section id="common-errors-in-ict" class="level1">
+<h1>Common Errors in ICT</h1>
+<section id="something-didnt-go-as-planned" class="level2">
+<h2 class="anchored" data-anchor-id="something-didnt-go-as-planned">“Something didn’t go as planned…</h2>
+<p>The message <strong>“Something didn’t go as planned. No need to worry—undoing changes”</strong> typically appears after a failed Windows update. Windows is trying to undo recent changes to restore the system to its previous state.</p>
+<p>This issue usually occurs when an update installation fails or encounters an error. Here are steps you can follow to resolve this issue:</p>
+</section>
+<section id="wait-for-windows-to-finish-undoing-changes" class="level2">
+<h2 class="anchored" data-anchor-id="wait-for-windows-to-finish-undoing-changes">1. Wait for Windows to Finish Undoing Changes</h2>
+<p>First, give Windows time to complete the undoing process. Sometimes, it may take several minutes.<br>
+Make sure the computer is connected to power to prevent interruptions during the process.</p>
+</section>
+<section id="force-restart-the-computer-if-stuck" class="level2">
+<h2 class="anchored" data-anchor-id="force-restart-the-computer-if-stuck">2. Force Restart the Computer (if stuck)</h2>
+<p>If the system is stuck for too long (e.g., more than an hour), you can try force restarting it:</p>
+<ul>
+<li>Press and hold the <strong>Power</strong> button for 10-15 seconds until the system turns off.</li>
+<li>Wait a few seconds and power it back on.</li>
+</ul>
+<p>If the system boots normally after this, continue with the steps below to prevent future issues.</p>
+</section>
+<section id="boot-into-safe-mode" class="level2">
+<h2 class="anchored" data-anchor-id="boot-into-safe-mode">3. Boot into Safe Mode</h2>
+<p>If the issue persists after restarting, try booting into <strong>Safe Mode</strong> to troubleshoot:</p>
+<ul>
+<li><strong>Access Advanced Startup</strong>:
+<ul>
+<li>Power off your computer by pressing and holding the <strong>Power</strong> button.</li>
+<li>Power it back on, and as soon as you see the Windows logo, press and hold the <strong>Power</strong> button again to force a shutdown.</li>
+<li>Repeat this 2-3 times until you see the <strong>Advanced Startup Options</strong> screen.</li>
+</ul></li>
+<li><strong>Navigate to Safe Mode</strong>:
+<ul>
+<li>Select <strong>Troubleshoot &gt; Advanced Options &gt; Startup Settings &gt; Restart</strong>.</li>
+<li>Once the computer restarts, press <strong>F4</strong> (or <strong>F5</strong> for Safe Mode with Networking) to boot into Safe Mode.</li>
+</ul></li>
+</ul>
+</section>
+<section id="run-windows-update-troubleshooter" class="level2">
+<h2 class="anchored" data-anchor-id="run-windows-update-troubleshooter">4. Run Windows Update Troubleshooter</h2>
+<p>In Safe Mode, run the <strong>Windows Update Troubleshooter</strong> to fix any problems related to the failed update:</p>
 <ol type="1">
-<li><p><strong>Check Internet Connectivity</strong>: Ensure that your device is connected to the internet. Try accessing a website to confirm connectivity.</p></li>
-<li><p><strong>Clear Cache and Cookies</strong>: Sometimes, browser cache and cookies can cause problems. Clear them to see if the issue resolves.</p></li>
-<li><p><strong>Update Software</strong>: Ensure that your operating system and any relevant applications are up to date. Outdated software can lead to compatibility issues.</p></li>
-<li><p><strong>Review Recent Changes</strong>: Think about any changes made prior to the error. Restoring settings or reverting changes may help.</p></li>
-<li><p><strong>Seek Help</strong>: If the issue persists, consider searching online forums or support pages for further assistance.</p></li>
+<li>Go to <strong>Settings &gt; Update &amp; Security &gt; Troubleshoot</strong>.</li>
+<li>Click <strong>Windows Update</strong>, then select <strong>Run the troubleshooter</strong>.</li>
+<li>Follow the prompts and apply any suggested fixes.</li>
 </ol>
 </section>
-<section id="backing-up-folders-using-command-prompt" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="backing-up-folders-using-command-prompt"><span class="header-section-number">1.2</span> Backing Up Folders Using Command Prompt</h2>
-<p>Backing up your data is crucial for preventing data loss. Here’s a simple method to back up folders using the Command Prompt:</p>
+<section id="delete-pending-windows-updates" class="level2">
+<h2 class="anchored" data-anchor-id="delete-pending-windows-updates">5. Delete Pending Windows Updates</h2>
+<p>If the update still fails, you can delete the pending updates and try again:</p>
 <ol type="1">
-<li><strong>Open Command Prompt</strong>:
-<ul>
-<li>Press <code>Windows + R</code>, type <code>cmd</code>, and hit <code>Enter</code>.</li>
-</ul></li>
-<li><strong>Use the xcopy Command</strong>:
-<ul>
-<li><p>To back up a folder, use the <code>xcopy</code> command. The syntax is as follows:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcopy</span> <span class="st">"C:\path\to\source"</span> <span class="st">"D:\path\to\backup"</span> /E /I</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Replace the paths with your actual source and backup folder paths.</p></li>
-</ul></li>
-<li><strong>Verify Backup</strong>: After the command completes, check the backup location to ensure all files have been copied successfully.</li>
+<li><p>Open <strong>Command Prompt</strong> as Administrator (you can search for “cmd” and right-click to select “Run as administrator”).</p></li>
+<li><p>Type the following command to stop the Windows Update service:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">net</span> stop wuauserv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Then, stop the <strong>Background Intelligent Transfer Service (BITS)</strong>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">net</span> stop bits</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Delete the files in the update folder by typing:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">del</span> %systemroot%\SoftwareDistribution\DataStore\*.<span class="pp">*</span> /s /q</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">del</span> %systemroot%\SoftwareDistribution\Download\*.<span class="pp">*</span> /s /q</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Restart the services you stopped:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">net</span> start wuauserv</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">net</span> start bits</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Reboot your computer and try updating again.</p></li>
 </ol>
 </section>
-<section id="conclusion" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">1.3</span> Conclusion</h2>
-<p>Dealing with ICT issues doesn’t have to be daunting. By following these troubleshooting steps and backup procedures, you can navigate common problems effectively. For more detailed information, consult relevant resources and support forums.</p>
+<section id="perform-a-system-restore" class="level2">
+<h2 class="anchored" data-anchor-id="perform-a-system-restore">6. Perform a System Restore</h2>
+<p>If the above methods don’t work, you can try restoring your computer to a point before the update was applied:</p>
+<ol type="1">
+<li>In the <strong>Advanced Startup Options</strong>, choose <strong>Troubleshoot &gt; Advanced Options &gt; System Restore</strong>.</li>
+<li>Select a restore point from before the issue started.</li>
+<li>Follow the prompts to restore the system to that point.</li>
+</ol>
+</section>
+<section id="perform-an-in-place-upgrade-or-reset" class="level2">
+<h2 class="anchored" data-anchor-id="perform-an-in-place-upgrade-or-reset">7. Perform an In-Place Upgrade or Reset</h2>
+<p>If none of the above works, you can perform a <strong>repair installation</strong> using the Windows 10/11 installation media:</p>
+<ol type="1">
+<li>Download the <strong>Windows Installation Media tool</strong> from Microsoft’s website on a working computer.</li>
+<li>Create a bootable USB drive and boot your computer from the USB.</li>
+<li>Select <strong>Repair your computer</strong> and choose the <strong>Reset this PC</strong> option, allowing you to keep your files while reinstalling Windows.</li>
+</ol>
+<p>This should resolve any deeper issues with the Windows update system.</p>
+</section>
+<section id="contact-support" class="level2">
+<h2 class="anchored" data-anchor-id="contact-support">8. Contact Support</h2>
+<p>If the issue persists after all of these steps, you may want to contact <strong>Microsoft Support</strong> or visit a professional technician.</p>
 </section>
 </section>
 

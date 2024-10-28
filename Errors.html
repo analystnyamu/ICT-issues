@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your Name">
 
-<title>Troubleshooting: ‘Something Didn’t Go as Planned’ Error</title>
+<title>Handling Errors</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,14 +80,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#wait-for-windows-to-finish-undoing-changes" id="toc-wait-for-windows-to-finish-undoing-changes" class="nav-link active" data-scroll-target="#wait-for-windows-to-finish-undoing-changes"><span class="header-section-number">1</span> 1. Wait for Windows to Finish Undoing Changes</a></li>
-  <li><a href="#force-restart-the-computer-if-stuck" id="toc-force-restart-the-computer-if-stuck" class="nav-link" data-scroll-target="#force-restart-the-computer-if-stuck"><span class="header-section-number">2</span> 2. Force Restart the Computer (if stuck)</a></li>
-  <li><a href="#boot-into-safe-mode" id="toc-boot-into-safe-mode" class="nav-link" data-scroll-target="#boot-into-safe-mode"><span class="header-section-number">3</span> 3. Boot into Safe Mode</a></li>
-  <li><a href="#run-windows-update-troubleshooter" id="toc-run-windows-update-troubleshooter" class="nav-link" data-scroll-target="#run-windows-update-troubleshooter"><span class="header-section-number">4</span> 4. Run Windows Update Troubleshooter</a></li>
-  <li><a href="#delete-pending-windows-updates" id="toc-delete-pending-windows-updates" class="nav-link" data-scroll-target="#delete-pending-windows-updates"><span class="header-section-number">5</span> 5. Delete Pending Windows Updates</a></li>
-  <li><a href="#perform-a-system-restore" id="toc-perform-a-system-restore" class="nav-link" data-scroll-target="#perform-a-system-restore"><span class="header-section-number">6</span> 6. Perform a System Restore</a></li>
-  <li><a href="#perform-an-in-place-upgrade-or-reset" id="toc-perform-an-in-place-upgrade-or-reset" class="nav-link" data-scroll-target="#perform-an-in-place-upgrade-or-reset"><span class="header-section-number">7</span> 7. Perform an In-Place Upgrade or Reset</a></li>
-  <li><a href="#contact-support" id="toc-contact-support" class="nav-link" data-scroll-target="#contact-support"><span class="header-section-number">8</span> 8. Contact Support</a></li>
+  <li><a href="#common-errors-in-ict" id="toc-common-errors-in-ict" class="nav-link active" data-scroll-target="#common-errors-in-ict">Common Errors in ICT</a>
+  <ul class="collapse">
+  <li><a href="#wait-for-windows-to-finish-undoing-changes" id="toc-wait-for-windows-to-finish-undoing-changes" class="nav-link" data-scroll-target="#wait-for-windows-to-finish-undoing-changes">1. Wait for Windows to Finish Undoing Changes</a></li>
+  <li><a href="#force-restart-the-computer-if-stuck" id="toc-force-restart-the-computer-if-stuck" class="nav-link" data-scroll-target="#force-restart-the-computer-if-stuck">2. Force Restart the Computer (if stuck)</a></li>
+  <li><a href="#boot-into-safe-mode" id="toc-boot-into-safe-mode" class="nav-link" data-scroll-target="#boot-into-safe-mode">3. Boot into Safe Mode</a></li>
+  <li><a href="#run-windows-update-troubleshooter" id="toc-run-windows-update-troubleshooter" class="nav-link" data-scroll-target="#run-windows-update-troubleshooter">4. Run Windows Update Troubleshooter</a></li>
+  <li><a href="#delete-pending-windows-updates" id="toc-delete-pending-windows-updates" class="nav-link" data-scroll-target="#delete-pending-windows-updates">5. Delete Pending Windows Updates</a></li>
+  <li><a href="#perform-a-system-restore" id="toc-perform-a-system-restore" class="nav-link" data-scroll-target="#perform-a-system-restore">6. Perform a System Restore</a></li>
+  <li><a href="#perform-an-in-place-upgrade-or-reset" id="toc-perform-an-in-place-upgrade-or-reset" class="nav-link" data-scroll-target="#perform-an-in-place-upgrade-or-reset">7. Perform an In-Place Upgrade or Reset</a></li>
+  <li><a href="#contact-support" id="toc-contact-support" class="nav-link" data-scroll-target="#contact-support">8. Contact Support</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -96,26 +98,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Troubleshooting: ‘Something Didn’t Go as Planned’ Error</h1>
+<h1 class="title">Handling Errors</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Your Name </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
   
     
   </div>
@@ -125,15 +115,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="common-errors-in-ict" class="level1">
+<h1>Common Errors in ICT</h1>
 <p>The message <strong>“Something didn’t go as planned. No need to worry—undoing changes”</strong> typically appears after a failed Windows update. Windows is trying to undo recent changes to restore the system to its previous state.</p>
 <p>This issue usually occurs when an update installation fails or encounters an error. Here are steps you can follow to resolve this issue:</p>
-<section id="wait-for-windows-to-finish-undoing-changes" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="wait-for-windows-to-finish-undoing-changes"><span class="header-section-number">1</span> 1. Wait for Windows to Finish Undoing Changes</h2>
+<section id="wait-for-windows-to-finish-undoing-changes" class="level2">
+<h2 class="anchored" data-anchor-id="wait-for-windows-to-finish-undoing-changes">1. Wait for Windows to Finish Undoing Changes</h2>
 <p>First, give Windows time to complete the undoing process. Sometimes, it may take several minutes.<br>
 Make sure the computer is connected to power to prevent interruptions during the process.</p>
 </section>
-<section id="force-restart-the-computer-if-stuck" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="force-restart-the-computer-if-stuck"><span class="header-section-number">2</span> 2. Force Restart the Computer (if stuck)</h2>
+<section id="force-restart-the-computer-if-stuck" class="level2">
+<h2 class="anchored" data-anchor-id="force-restart-the-computer-if-stuck">2. Force Restart the Computer (if stuck)</h2>
 <p>If the system is stuck for too long (e.g., more than an hour), you can try force restarting it:</p>
 <ul>
 <li>Press and hold the <strong>Power</strong> button for 10-15 seconds until the system turns off.</li>
@@ -141,8 +133,8 @@ Make sure the computer is connected to power to prevent interruptions during the
 </ul>
 <p>If the system boots normally after this, continue with the steps below to prevent future issues.</p>
 </section>
-<section id="boot-into-safe-mode" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="boot-into-safe-mode"><span class="header-section-number">3</span> 3. Boot into Safe Mode</h2>
+<section id="boot-into-safe-mode" class="level2">
+<h2 class="anchored" data-anchor-id="boot-into-safe-mode">3. Boot into Safe Mode</h2>
 <p>If the issue persists after restarting, try booting into <strong>Safe Mode</strong> to troubleshoot:</p>
 <ul>
 <li><strong>Access Advanced Startup</strong>:
@@ -158,8 +150,8 @@ Make sure the computer is connected to power to prevent interruptions during the
 </ul></li>
 </ul>
 </section>
-<section id="run-windows-update-troubleshooter" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="run-windows-update-troubleshooter"><span class="header-section-number">4</span> 4. Run Windows Update Troubleshooter</h2>
+<section id="run-windows-update-troubleshooter" class="level2">
+<h2 class="anchored" data-anchor-id="run-windows-update-troubleshooter">4. Run Windows Update Troubleshooter</h2>
 <p>In Safe Mode, run the <strong>Windows Update Troubleshooter</strong> to fix any problems related to the failed update:</p>
 <ol type="1">
 <li>Go to <strong>Settings &gt; Update &amp; Security &gt; Troubleshoot</strong>.</li>
@@ -167,8 +159,8 @@ Make sure the computer is connected to power to prevent interruptions during the
 <li>Follow the prompts and apply any suggested fixes.</li>
 </ol>
 </section>
-<section id="delete-pending-windows-updates" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="delete-pending-windows-updates"><span class="header-section-number">5</span> 5. Delete Pending Windows Updates</h2>
+<section id="delete-pending-windows-updates" class="level2">
+<h2 class="anchored" data-anchor-id="delete-pending-windows-updates">5. Delete Pending Windows Updates</h2>
 <p>If the update still fails, you can delete the pending updates and try again:</p>
 <ol type="1">
 <li><p>Open <strong>Command Prompt</strong> as Administrator (you can search for “cmd” and right-click to select “Run as administrator”).</p></li>
@@ -185,8 +177,8 @@ Make sure the computer is connected to power to prevent interruptions during the
 <li><p>Reboot your computer and try updating again.</p></li>
 </ol>
 </section>
-<section id="perform-a-system-restore" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="perform-a-system-restore"><span class="header-section-number">6</span> 6. Perform a System Restore</h2>
+<section id="perform-a-system-restore" class="level2">
+<h2 class="anchored" data-anchor-id="perform-a-system-restore">6. Perform a System Restore</h2>
 <p>If the above methods don’t work, you can try restoring your computer to a point before the update was applied:</p>
 <ol type="1">
 <li>In the <strong>Advanced Startup Options</strong>, choose <strong>Troubleshoot &gt; Advanced Options &gt; System Restore</strong>.</li>
@@ -194,8 +186,8 @@ Make sure the computer is connected to power to prevent interruptions during the
 <li>Follow the prompts to restore the system to that point.</li>
 </ol>
 </section>
-<section id="perform-an-in-place-upgrade-or-reset" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="perform-an-in-place-upgrade-or-reset"><span class="header-section-number">7</span> 7. Perform an In-Place Upgrade or Reset</h2>
+<section id="perform-an-in-place-upgrade-or-reset" class="level2">
+<h2 class="anchored" data-anchor-id="perform-an-in-place-upgrade-or-reset">7. Perform an In-Place Upgrade or Reset</h2>
 <p>If none of the above works, you can perform a <strong>repair installation</strong> using the Windows 10/11 installation media:</p>
 <ol type="1">
 <li>Download the <strong>Windows Installation Media tool</strong> from Microsoft’s website on a working computer.</li>
@@ -204,9 +196,10 @@ Make sure the computer is connected to power to prevent interruptions during the
 </ol>
 <p>This should resolve any deeper issues with the Windows update system.</p>
 </section>
-<section id="contact-support" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="contact-support"><span class="header-section-number">8</span> 8. Contact Support</h2>
+<section id="contact-support" class="level2">
+<h2 class="anchored" data-anchor-id="contact-support">8. Contact Support</h2>
 <p>If the issue persists after all of these steps, you may want to contact <strong>Microsoft Support</strong> or visit a professional technician.</p>
+</section>
 </section>
 
 </main>

@@ -1,15 +1,16 @@
-project:
-  type: book
-  output-dir: _book
-
-# Specify the chapters of the book
-chapters:
-  - index.qmd           # Introduction or Overview
-  - Errors.qmd          # Chapter on handling Errors
-  - ICT issues.qmd      # Specific ICT Issues and Solutions
+# Define the main document structure and output settings
+output-dir: _output  # Optional: Specify output directory, or leave this out for root output
 
 format:
   html:
-    theme:
-      - cosmo            # Theme for styling
+    theme: cosmo               # Set your desired theme
+    css: styles.css            # Optional custom CSS for styling
+    toc: true                  # Include a Table of Contents if needed
+    toc-depth: 2               # Depth for the TOC
+    code-link: true            # Enable links for code snippets
+    colorlinks: true           # Use colored hyperlinks for readability
 
+# Optional font customization
+font-family:
+  main: "Kingster, Arial, sans-serif"    # Body text font
+  headings: "Avenir, Futura, sans-serif" # Heading font
