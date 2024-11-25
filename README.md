@@ -63,3 +63,7 @@ If your computer won’t boot and you need to back up critical files, you can do
   
 - **Backup Commands**:
   - Use `xcopy` to back up your Desktop,
+  
+## View the document in different formats
+
+[Read as html format](index.html)
