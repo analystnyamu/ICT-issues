@@ -3,9 +3,9 @@
 numbered: false
 ---
 
-# ICT Issues and Solutions {.unnumbered}
+# ICT Troubleshooting and Solutions Handbook {.unnumbered}
 
-Welcome to **ICT Issues and Solutions**, a practical guide designed to help users troubleshoot and resolve common computer problems with ease. In this book, we will address everyday challenges that many users face, providing step-by-step solutions and actionable advice.
+Welcome to **ICT Troubleshooting and Solutions Handbook**, a practical guide designed to help users troubleshoot and resolve common computer problems with ease. In this book, we will address everyday challenges that many users face, providing step-by-step solutions and actionable advice.
 
 **What You'll Learn**
 

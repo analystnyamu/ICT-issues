@@ -1,13 +1,14 @@
 ---
-title: "Specific ICT Issues and Solutions"
-format: html
+title: "Specific ICT Issues and Solutions" 
 ---
 
 If you are unable to boot into Windows and need to back up specific folders like **Desktop**, **Downloads**, and **Documents** using the **Command Prompt** from a recovery environment, you can use a USB drive or external hard drive as the destination for the backup.
 
-## Step-by-Step Guide to Backup Folders Using Command Prompt
+## Backup Folders Using Command Prompt
 
-### 1. Boot into Advanced Startup Options
+**Step-by-Step Guide**
+
+**1. Boot into Advanced Startup Options**
 
 If your computer won’t boot normally, use the following method to access the **Advanced Startup Options**:
 
@@ -15,11 +16,11 @@ If your computer won’t boot normally, use the following method to access the *
 - Repeat this 2-3 times, and on the next boot, Windows should automatically enter the **Advanced Startup Options** menu.
 - From here, select **Troubleshoot > Advanced Options > Command Prompt**.
 
-### 2. Connect Your External Storage Device
+**2. Connect Your External Storage Device**
 
 - Plug in a USB drive or external hard drive where you want to back up your folders.
 
-### 3. Identify Your External Drive Letter
+**3. Identify Your External Drive Letter**
 
 In the **Command Prompt**, type the following command to list all drives:
 
@@ -29,7 +30,7 @@ wmic logicaldisk get name
 
 This will display all available drives. Your external drive will have a letter like E: or F:. Note the drive letter of your external storage.
 
-### 4. Navigate to Your User Directory
+**4. Navigate to Your User Directory**
 
 You will need to navigate to your user's home folder where the Desktop, Downloads, and Documents folders are located. This folder is typically located at:
 
@@ -45,11 +46,11 @@ Copy code
 cd "C:\Users\YourUsername"
 ```
 
-### 5. Backup the Folders
+**5. Backup the Folders**
 
 Now, use the `xcopy` command to copy the folders to your external drive.
 
-**Backup Desktop Folder**
+- **Backup Desktop Folder**
 
 ```{bash}
 xcopy "C:\Users\YourUsername\Desktop" "E:\Backup\Desktop" /E /H /C /I
@@ -65,19 +66,19 @@ xcopy "C:\Users\YourUsername\Desktop" "E:\Backup\Desktop" /E /H /C /I
     
     * `/I` assumes the destination is a directory.
     
-**Backup Downloads Folder**
+- **Backup Downloads Folder**
 
 ```{bash}
 xcopy "C:\Users\YourUsername\Downloads" "E:\Backup\Downloads" /E /H /C /I
 ```
 
-**Backup Documents Folder**
+- **Backup Documents Folder**
 
 ```{bash}
 xcopy "C:\Users\YourUsername\Documents" "E:\Backup\Documents" /E /H /C /I
 ```
 
-### 6. Verify Backup
+**6. Verify Backup**
 
 After copying, you can use the following command to verify the contents of your backup:
 
@@ -87,7 +88,7 @@ dir "E:\Backup"
 
 This will show you the directories and files that have been copied.
 
-### 7. Safely Eject Your External Drive
+**7. Safely Eject Your External Drive**
 
 After the backup is complete, make sure to safely eject the drive by typing:
 
@@ -98,11 +99,11 @@ wmic logicaldisk where "DeviceID='E:'" get name, volumename
 Replace E: with your drive letter.
 Once the process finishes, you can safely remove the external drive.
 
-### 8. Exit Command Prompt
+**8. Exit Command Prompt**
 
 After the backup is complete, type exit to close the Command Prompt.
 
-### Summary
+**Summary**
 
 Boot into Advanced Startup Options and open Command Prompt.
 Use the `xcopy` command to back up the Desktop, Downloads, and Documents folders to your external storage.
