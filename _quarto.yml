@@ -1,6 +1,14 @@
-# Define the main document structure and output settings
-output-dir: _output  # Optional: Specify output directory, or leave this out for root output
+project:
+  type: book
 
+book:
+  title: "ICT Issues"
+  author: "Martin N Wanjiru"
+  chapters:
+    - index.qmd
+    - Chapter1.qmd
+    - Chapter2.qmd
+    - Chapter3.qmd
 format:
   html:
     theme: cosmo               # Set your desired theme
@@ -9,8 +17,20 @@ format:
     toc-depth: 2               # Depth for the TOC
     code-link: true            # Enable links for code snippets
     colorlinks: true           # Use colored hyperlinks for readability
+    author-meta: "Martin Nyamu & Kenneth Gatungo"
+    # Avoiding a single-page format                  # Ensure pagination is enabled
+    number-chapters: true
+    next-chapter: true              # Include next chapter navigation
+    previous-chapter: true          # Include previous chapter navigation
+  pdf:
+    number-sections: true
 
 # Optional font customization
 font-family:
   main: "Kingster, Arial, sans-serif"    # Body text font
   headings: "Avenir, Futura, sans-serif" # Heading font
+
+
+
+
+
