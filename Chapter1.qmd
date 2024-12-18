@@ -34,15 +34,13 @@ This will display all available drives. Your external drive will have a letter l
 
 You will need to navigate to your user's home folder where the Desktop, Downloads, and Documents folders are located. This folder is typically located at:
 
-```{bash}
-Copy code
+```bash
 'C:\Users\YourUsername'
 ```
 
 To navigate to the folder, run the following command, replacing `YourUsername` with your actual username:
 
-```{bash}
-Copy code
+```bash
 cd "C:\Users\YourUsername"
 ```
 
