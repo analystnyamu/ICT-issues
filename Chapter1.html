@@ -219,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p><strong>3. Identify Your External Drive Letter</strong></p>
 <p>In the <strong>Command Prompt</strong>, type the following command to list all drives:</p>
-<pre class="{bash}"><code>wmic logicaldisk get name</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wmic</span> logicaldisk get name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This will display all available drives. Your external drive will have a letter like E: or F:. Note the drive letter of your external storage.</p>
 <p><strong>4. Navigate to Your User Directory</strong></p>
 <p>You will need to navigate to your user’s home folder where the Desktop, Downloads, and Documents folders are located. This folder is typically located at:</p>
@@ -231,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><strong>Backup Desktop Folder</strong></li>
 </ul>
-<pre class="{bash}"><code>xcopy "C:\Users\YourUsername\Desktop" "E:\Backup\Desktop" /E /H /C /I</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcopy</span> <span class="st">"C:\Users\YourUsername\Desktop"</span> <span class="st">"E:\Backup\Desktop"</span> /E /H /C /I</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><p>Replace <code>E:\Backup\Desktop</code> with the correct drive letter and folder path on your external drive.</p>
 <ul>
@@ -242,18 +242,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li><p><strong>Backup Downloads Folder</strong></p></li>
 </ul>
-<pre class="{bash}"><code>xcopy "C:\Users\YourUsername\Downloads" "E:\Backup\Downloads" /E /H /C /I</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcopy</span> <span class="st">"C:\Users\YourUsername\Downloads"</span> <span class="st">"E:\Backup\Downloads"</span> /E /H /C /I</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><strong>Backup Documents Folder</strong></li>
 </ul>
-<pre class="{bash}"><code>xcopy "C:\Users\YourUsername\Documents" "E:\Backup\Documents" /E /H /C /I</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcopy</span> <span class="st">"C:\Users\YourUsername\Documents"</span> <span class="st">"E:\Backup\Documents"</span> /E /H /C /I</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>6. Verify Backup</strong></p>
 <p>After copying, you can use the following command to verify the contents of your backup:</p>
-<pre class="{bash}"><code>dir "E:\Backup"</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span> <span class="st">"E:\Backup"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This will show you the directories and files that have been copied.</p>
 <p><strong>7. Safely Eject Your External Drive</strong></p>
 <p>After the backup is complete, make sure to safely eject the drive by typing:</p>
-<pre class="{bash}"><code>wmic logicaldisk where "DeviceID='E:'" get name, volumename</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">wmic</span> logicaldisk where <span class="st">"DeviceID='E:'"</span> get name, volumename</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Replace E: with your drive letter. Once the process finishes, you can safely remove the external drive.</p>
 <p><strong>8. Exit Command Prompt</strong></p>
 <p>After the backup is complete, type exit to close the Command Prompt.</p>
