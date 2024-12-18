@@ -132,7 +132,7 @@ If you encounter persistent issues or need help removing all traces of Otter.ai:
 
 By following these steps, you can fully remove Otter.ai from your Outlook account and prevent further interference.
 
-[Read the Guide](https://analystnyamu.github.io/ICT-issues/Chapter3.html)
+[Read the Full Guide Here](https://analystnyamu.github.io/ICT-issues/Chapter3.html)
 
 
 
