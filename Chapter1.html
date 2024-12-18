@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ICT Issues and Solutions</span></a>
+ <span class="menu-text">ICT Troubleshooting and Solutions Handbook</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -142,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#step-by-step-guide-to-backup-folders-using-command-prompt" id="toc-step-by-step-guide-to-backup-folders-using-command-prompt" class="nav-link active" data-scroll-target="#step-by-step-guide-to-backup-folders-using-command-prompt"><span class="header-section-number">1.1</span> Step-by-Step Guide to Backup Folders Using Command Prompt</a></li>
+  <li><a href="#backup-folders-using-command-prompt" id="toc-backup-folders-using-command-prompt" class="nav-link active" data-scroll-target="#backup-folders-using-command-prompt"><span class="header-section-number">1.1</span> Backup Folders Using Command Prompt</a></li>
   </ul>
 </nav>
     </div>
@@ -169,42 +169,36 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>If you are unable to boot into Windows and need to back up specific folders like <strong>Desktop</strong>, <strong>Downloads</strong>, and <strong>Documents</strong> using the <strong>Command Prompt</strong> from a recovery environment, you can use a USB drive or external hard drive as the destination for the backup.</p>
-<section id="step-by-step-guide-to-backup-folders-using-command-prompt" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="step-by-step-guide-to-backup-folders-using-command-prompt"><span class="header-section-number">1.1</span> Step-by-Step Guide to Backup Folders Using Command Prompt</h2>
-<section id="boot-into-advanced-startup-options" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="boot-into-advanced-startup-options"><span class="header-section-number">1.1.1</span> 1. Boot into Advanced Startup Options</h3>
+<section id="backup-folders-using-command-prompt" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="backup-folders-using-command-prompt"><span class="header-section-number">1.1</span> Backup Folders Using Command Prompt</h2>
+<p><strong>Step-by-Step Guide</strong></p>
+<p><strong>1. Boot into Advanced Startup Options</strong></p>
 <p>If your computer won’t boot normally, use the following method to access the <strong>Advanced Startup Options</strong>:</p>
 <ul>
 <li>Power on your computer and as soon as it begins booting, hold the <strong>power button</strong> for 10 seconds to force a shutdown.</li>
 <li>Repeat this 2-3 times, and on the next boot, Windows should automatically enter the <strong>Advanced Startup Options</strong> menu.</li>
 <li>From here, select <strong>Troubleshoot &gt; Advanced Options &gt; Command Prompt</strong>.</li>
 </ul>
-</section>
-<section id="connect-your-external-storage-device" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="connect-your-external-storage-device"><span class="header-section-number">1.1.2</span> 2. Connect Your External Storage Device</h3>
+<p><strong>2. Connect Your External Storage Device</strong></p>
 <ul>
 <li>Plug in a USB drive or external hard drive where you want to back up your folders.</li>
 </ul>
-</section>
-<section id="identify-your-external-drive-letter" class="level3" data-number="1.1.3">
-<h3 data-number="1.1.3" class="anchored" data-anchor-id="identify-your-external-drive-letter"><span class="header-section-number">1.1.3</span> 3. Identify Your External Drive Letter</h3>
+<p><strong>3. Identify Your External Drive Letter</strong></p>
 <p>In the <strong>Command Prompt</strong>, type the following command to list all drives:</p>
 <pre class="{bash}"><code>wmic logicaldisk get name</code></pre>
 <p>This will display all available drives. Your external drive will have a letter like E: or F:. Note the drive letter of your external storage.</p>
-</section>
-<section id="navigate-to-your-user-directory" class="level3" data-number="1.1.4">
-<h3 data-number="1.1.4" class="anchored" data-anchor-id="navigate-to-your-user-directory"><span class="header-section-number">1.1.4</span> 4. Navigate to Your User Directory</h3>
+<p><strong>4. Navigate to Your User Directory</strong></p>
 <p>You will need to navigate to your user’s home folder where the Desktop, Downloads, and Documents folders are located. This folder is typically located at:</p>
 <pre class="{bash}"><code>Copy code
 'C:\Users\YourUsername'</code></pre>
 <p>To navigate to the folder, run the following command, replacing <code>YourUsername</code> with your actual username:</p>
 <pre class="{bash}"><code>Copy code
 cd "C:\Users\YourUsername"</code></pre>
-</section>
-<section id="backup-the-folders" class="level3" data-number="1.1.5">
-<h3 data-number="1.1.5" class="anchored" data-anchor-id="backup-the-folders"><span class="header-section-number">1.1.5</span> 5. Backup the Folders</h3>
+<p><strong>5. Backup the Folders</strong></p>
 <p>Now, use the <code>xcopy</code> command to copy the folders to your external drive.</p>
-<p><strong>Backup Desktop Folder</strong></p>
+<ul>
+<li><strong>Backup Desktop Folder</strong></li>
+</ul>
 <pre class="{bash}"><code>xcopy "C:\Users\YourUsername\Desktop" "E:\Backup\Desktop" /E /H /C /I</code></pre>
 <ul>
 <li><p>Replace <code>E:\Backup\Desktop</code> with the correct drive letter and folder path on your external drive.</p>
@@ -214,34 +208,27 @@ cd "C:\Users\YourUsername"</code></pre>
 <li><p><code>/C</code> continues copying even if errors occur.</p></li>
 <li><p><code>/I</code> assumes the destination is a directory.</p></li>
 </ul></li>
+<li><p><strong>Backup Downloads Folder</strong></p></li>
 </ul>
-<p><strong>Backup Downloads Folder</strong></p>
 <pre class="{bash}"><code>xcopy "C:\Users\YourUsername\Downloads" "E:\Backup\Downloads" /E /H /C /I</code></pre>
-<p><strong>Backup Documents Folder</strong></p>
+<ul>
+<li><strong>Backup Documents Folder</strong></li>
+</ul>
 <pre class="{bash}"><code>xcopy "C:\Users\YourUsername\Documents" "E:\Backup\Documents" /E /H /C /I</code></pre>
-</section>
-<section id="verify-backup" class="level3" data-number="1.1.6">
-<h3 data-number="1.1.6" class="anchored" data-anchor-id="verify-backup"><span class="header-section-number">1.1.6</span> 6. Verify Backup</h3>
+<p><strong>6. Verify Backup</strong></p>
 <p>After copying, you can use the following command to verify the contents of your backup:</p>
 <pre class="{bash}"><code>dir "E:\Backup"</code></pre>
 <p>This will show you the directories and files that have been copied.</p>
-</section>
-<section id="safely-eject-your-external-drive" class="level3" data-number="1.1.7">
-<h3 data-number="1.1.7" class="anchored" data-anchor-id="safely-eject-your-external-drive"><span class="header-section-number">1.1.7</span> 7. Safely Eject Your External Drive</h3>
+<p><strong>7. Safely Eject Your External Drive</strong></p>
 <p>After the backup is complete, make sure to safely eject the drive by typing:</p>
 <pre class="{bash}"><code>wmic logicaldisk where "DeviceID='E:'" get name, volumename</code></pre>
 <p>Replace E: with your drive letter. Once the process finishes, you can safely remove the external drive.</p>
-</section>
-<section id="exit-command-prompt" class="level3" data-number="1.1.8">
-<h3 data-number="1.1.8" class="anchored" data-anchor-id="exit-command-prompt"><span class="header-section-number">1.1.8</span> 8. Exit Command Prompt</h3>
+<p><strong>8. Exit Command Prompt</strong></p>
 <p>After the backup is complete, type exit to close the Command Prompt.</p>
-</section>
-<section id="summary" class="level3" data-number="1.1.9">
-<h3 data-number="1.1.9" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1.9</span> Summary</h3>
+<p><strong>Summary</strong></p>
 <p>Boot into Advanced Startup Options and open Command Prompt. Use the <code>xcopy</code> command to back up the Desktop, Downloads, and Documents folders to your external storage. Make sure to verify the backup and safely remove the external drive before exiting Command Prompt.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -667,8 +654,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="ICT Issues and Solutions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ICT Issues and Solutions</span>
+      <a href="./index.html" class="pagination-link" aria-label="ICT Troubleshooting and Solutions Handbook">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">ICT Troubleshooting and Solutions Handbook</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
