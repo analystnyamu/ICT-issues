@@ -24,7 +24,7 @@ If your computer won’t boot normally, use the following method to access the *
 
 In the **Command Prompt**, type the following command to list all drives:
 
-```{bash}
+```bash
 wmic logicaldisk get name
 ```
 
@@ -50,7 +50,7 @@ Now, use the `xcopy` command to copy the folders to your external drive.
 
 - **Backup Desktop Folder**
 
-```{bash}
+``` bash
 xcopy "C:\Users\YourUsername\Desktop" "E:\Backup\Desktop" /E /H /C /I
 ```
 
@@ -66,13 +66,13 @@ xcopy "C:\Users\YourUsername\Desktop" "E:\Backup\Desktop" /E /H /C /I
     
 - **Backup Downloads Folder**
 
-```{bash}
+``` bash
 xcopy "C:\Users\YourUsername\Downloads" "E:\Backup\Downloads" /E /H /C /I
 ```
 
 - **Backup Documents Folder**
 
-```{bash}
+``` bash
 xcopy "C:\Users\YourUsername\Documents" "E:\Backup\Documents" /E /H /C /I
 ```
 
@@ -80,7 +80,7 @@ xcopy "C:\Users\YourUsername\Documents" "E:\Backup\Documents" /E /H /C /I
 
 After copying, you can use the following command to verify the contents of your backup:
 
-```{bash}
+``` bash
 dir "E:\Backup"
 ```
 
@@ -90,7 +90,7 @@ This will show you the directories and files that have been copied.
 
 After the backup is complete, make sure to safely eject the drive by typing:
 
-```{bash}
+``` bash
 wmic logicaldisk where "DeviceID='E:'" get name, volumename
 ```
 
