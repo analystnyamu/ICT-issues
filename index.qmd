@@ -1,10 +1,9 @@
 
 ---
-title: "ICT Issues and Solutions"
-subtitle: "A Practical Guide to Resolving Common Computer Problems"
-author: "Martin N Wanjiru"
-date: "2024"
+numbered: false
 ---
+
+# ICT Issues and Solutions {.unnumbered}
 
 Welcome to **ICT Issues and Solutions**, a practical guide designed to help users troubleshoot and resolve common computer problems with ease. In this book, we will address everyday challenges that many users face, providing step-by-step solutions and actionable advice.
 
